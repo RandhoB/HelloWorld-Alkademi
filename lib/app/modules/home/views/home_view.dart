@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:helloworld_alkademi/theme.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -10,13 +11,24 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HomeView'),
+        title: Text(
+          'Hello Alkademi',
+          style: appStyle.copyWith(),
+        ),
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+        child: Column(
+          children: [
+            Text(
+              'Hello',
+              style: bodyJudulStyle.copyWith(),
+            ),
+            Text(
+              'World',
+              style: bodyIsiStyle.copyWith(),
+            ),
+          ],
         ),
       ),
     );
